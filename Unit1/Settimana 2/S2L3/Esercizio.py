@@ -15,5 +15,5 @@ band_name = city + " " + animal
 
 
 
-print("Il nome della band e':", band_name)
+print(f"Il nome della band e': {band_name}")
 
