@@ -1,7 +1,7 @@
 import socket as so
 import os
 import subprocess
-import time  # Libreria per la gestione del tempo prima di provare la connessione
+import time  #Libreria per la gestione del tempo prima di provare la connessione
 
 SRV_ADDR = "127.0.0.1"
 SRV_PORT = 4445  

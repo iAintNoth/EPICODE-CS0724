@@ -1,0 +1,4 @@
+Messaggio cifrato = HSNFRGH
+Cifrario usato = Cifrario di Cesare
+Alfabeto usato = Italiano (21 Lettere)
+Messaggio Codificato = EPICODE
