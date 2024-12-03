@@ -1,0 +1,18 @@
+# Nmap 7.94SVN scan initiated Tue Dec  3 08:44:58 2024 as: /usr/lib/nmap/nmap --privileged -O -oN osfingerprint_report_xp.txt 192.168.10.102
+Nmap scan report for 192.168.10.102
+Host is up (0.00036s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+MAC Address: 08:00:27:5C:8D:1C (Oracle VirtualBox virtual NIC)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|specialized
+Running (JUST GUESSING): Microsoft Windows XP|2003|2008|2000 (97%), General Dynamics embedded (89%)
+OS CPE: cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_server_2003::sp1 cpe:/o:microsoft:windows_server_2003::sp2 cpe:/o:microsoft:windows_server_2008::sp2 cpe:/o:microsoft:windows_2000::sp4
+Aggressive OS guesses: Microsoft Windows XP SP3 (97%), Microsoft Windows Server 2003 SP1 or SP2 (95%), Microsoft Windows Server 2008 Enterprise SP2 (95%), Microsoft Windows Server 2003 SP2 (94%), Microsoft Windows XP (94%), Microsoft Windows XP SP2 or Windows Server 2003 (93%), Microsoft Windows XP SP2 or SP3 (93%), Microsoft Windows 2000 SP4 (93%), Microsoft Windows 2000 SP4 or Windows XP SP2 or SP3 (92%), Microsoft Windows XP SP2 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Dec  3 08:45:19 2024 -- 1 IP address (1 host up) scanned in 21.68 seconds
