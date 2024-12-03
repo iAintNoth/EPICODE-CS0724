@@ -1,8 +1,0 @@
-La differenza tra lo scan SYN e TCP sta nel fatto che:
-
-- Nello scan SYN (-sS) le porte chiuse non vengono mostrare come "Connessione rifiutata". In pratica se una porta viene ritrovata chiusa da Nmap non viene mostrata nel report.
-
-- Nello scan TCP (-sT) le porte chiuse sono riportare come "conn-refused".
-
-
-Un'altra differenza sta nel tempo di scassione.
