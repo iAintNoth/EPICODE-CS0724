@@ -1,0 +1,34 @@
+# Ambiente virtuale
+venv/
+*.env
+
+# File di configurazione IDE (esempio: PyCharm, Visual Studio Code)
+.idea/
+.vscode/
+
+# File di sistema (esempio: macOS, Windows)
+.DS_Store
+Thumbs.db
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# File di log
+*.log
+
+# File di cache
+*.pyo
+*.pyd
+
+# Cartelle di distribuzione
+dist/
+build/
+*.egg-info/
+
+# Ambiente virtuale (alternative)
+env/
+.venv/
+
+# Dipendenze
+requirements.txt
